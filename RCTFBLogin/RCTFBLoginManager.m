@@ -28,9 +28,14 @@
   return _fbLogin;
 }
 
-+ (dispatch_queue_t)methodQueue
+- (dispatch_queue_t)methodQueue
 {
   return dispatch_get_main_queue();
+}
+
++ (BOOL)requiresMainQueueSetup
+{
+    return YES;
 }
 
 RCT_EXPORT_VIEW_PROPERTY(permissions, NSStringArray);
